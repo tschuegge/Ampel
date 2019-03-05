@@ -1,0 +1,6 @@
+<app-lampe [farbe]="'red'" [ein]="lampeRotEin" [controlsAusblenden]="true" (gingDefekt)="lampeMeldetDefekt()"></app-lampe>
+<app-lampe [farbe]="'orange'" [ein]="lampeOrangeEin" [controlsAusblenden]="true" (gingDefekt)="lampeMeldetDefekt()"></app-lampe>
+<app-lampe [farbe]="'darkgreen'" [ein]="lampeGruenEin" [controlsAusblenden]="true" (gingDefekt)="lampeMeldetDefekt()"></app-lampe>
+<button type="button" (click)="tick()" *ngIf="!automode">Tick</button>
+<button type="button" (click)="repariereAlleLampen()" *ngIf="!automode">Alle Lampen reparieren</button>
+<div class="alarm" *ngIf="lampeDefekt">Eine Lampe ist defekt!</div>
