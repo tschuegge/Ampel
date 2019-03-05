@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, Input, QueryList, ViewChildren } from '@angular/core';
 import { LampeComponent } from '../lampe/lampe.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { LampeComponent } from '../lampe/lampe.component';
   templateUrl: './ampel.component.html',
   styleUrls: ['./ampel.component.scss']
 })
-export class AmpelComponent implements OnInit {
+export class AmpelComponent {
 
   /**
    * Status der Ampel
@@ -130,13 +130,6 @@ export class AmpelComponent implements OnInit {
       lampeComponent.reparieren();
     });
     this.lampeDefekt = false; // Alle Lampen sind repariert, das "defekt"-Flag kann wieder entfernt werden
-  }
-
-  /**
-   * Angular Lifecycle Hook
-   */
-  ngOnInit(): void {
-
   }
 
 }
