@@ -45,6 +45,11 @@ export class AmpelComponent {
   }
 
   /**
+   * Notfallmodus, lässt die Ampel gelb blinken
+   */
+  @Input() notfallmodus = false;
+
+  /**
    * Status der einzelnen Lampen
    */
   lampeRotEin = false;
@@ -65,12 +70,28 @@ export class AmpelComponent {
    * Schaltet die Ampel einen Status weiter
    */
   tick(): void {
-    this.status++; // Status um 1 erhöhen
-    if (this.status > 4) { // Wenn der Status über 4 kommt...
-      this.status = 1; // ... wieder auf 1 zurücksetzen
+
+    // *** nächsten Status setzen
+
+    if (!this.notfallmodus) {
+
+      // Normaler Modus
+      this.status++; // Status um 1 erhöhen
+      if (this.status > 4) { // Wenn der Status über 4 kommt...
+        this.status = 1; // ... wieder auf 1 zurücksetzen
+      }
+    } else {
+
+      // Notfallmodus
+      if (this.status === 0) { // Wenn Ampel aus...
+        this.status = 4; // ... Status "rot kommt" (also gelb) ...
+      } else { // ... sonst ...
+        this.status = 0; // ... Ampel wieder aus
+      }
     }
 
-    // Lampen anhand des Status ein- oder ausschalten
+    // *** Lampen anhand des Status ein- oder ausschalten
+
     switch (this.status) {
       case 0: // Ampel aus
         this.lampeRotEin = false;

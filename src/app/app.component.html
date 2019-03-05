@@ -7,4 +7,10 @@
     Automodus
   </label>
 </p>
-<app-ampel [automodus]="ampelAutomodus"></app-ampel>
+<p>
+  <label>
+    <input type="checkbox" [(ngModel)]="ampelNotfallmodus">
+    Notfallmodus
+  </label>
+</p>
+<app-ampel [automodus]="ampelAutomodus" [notfallmodus]="ampelNotfallmodus"></app-ampel>
