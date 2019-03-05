@@ -20,10 +20,11 @@ export class AmpelComponent {
 
   /**
    * Automatischer Modus, wenn aktiviert werden Tick's automatisch ausgelöst,
-   * Lampen selbstständig repariert und die dazugehörigen Schaltflächen gewechselt
+   * Lampen selbstständig repariert und die dazugehörigen Schaltflächen gewechselt.
    *
-   * Interval wird beim aktivieren des Automode gesetzt und das Handle (vom Typ number) in einer
-   * Instanzvariable gespeichert, beim deaktivieren des Automodes wird dieser Interval wieder deaktiviert
+   * Interval wird beim Aktivieren des Automode gesetzt und das Handle (vom Typ number) in einer
+   * Instanzvariable gespeichert, beim Deaktivieren des Automodes wird dieser Interval wieder deaktiviert.
+   * Dieser Schritt ist notwendig, da das Attribute während des Betriebs der Ampel geändert werden könnte.
    */
   private _automode = false;
   @Input()
