@@ -14,36 +14,35 @@ export class AmpelComponent {
   private status = 0;
 
   /**
-   * Handel für den Automode-Interval, für eine spätere Deaktivierung
+   * Handel für den Automodus-Interval, für eine spätere Deaktivierung
    */
-  private automodeIntervalHandle: number;
+  private automodusIntervalHandle: number;
 
   /**
    * Automatischer Modus, wenn aktiviert werden Tick's automatisch ausgelöst,
    * Lampen selbstständig repariert und die dazugehörigen Schaltflächen gewechselt.
    *
-   * Interval wird beim Aktivieren des Automode gesetzt und das Handle (vom Typ number) in einer
-   * Instanzvariable gespeichert, beim Deaktivieren des Automodes wird dieser Interval wieder deaktiviert.
+   * Interval wird beim Aktivieren des Automodus gesetzt und das Handle (vom Typ number) in einer
+   * Instanzvariable gespeichert, beim Deaktivieren des Automodus wird dieser Interval wieder deaktiviert.
    * Dieser Schritt ist notwendig, da das Attribute während des Betriebs der Ampel geändert werden könnte.
    */
-  private _automode = false;
+  private _automodus = false;
   @Input()
-  set automode(v: boolean) {
-    this._automode = v;
-    if (this._automode) {
+  set automodus(v: boolean) {
+    this._automodus = v;
+    if (this._automodus) {
 
-      // Automode aktivieren
-      this.automodeIntervalHandle = window.setInterval(() => this.tick(), 1000); // jede Sekunde ein Tick auslösen
+      // Automodus aktivieren
+      this.automodusIntervalHandle = window.setInterval(() => this.tick(), 1000); // jede Sekunde ein Tick auslösen
     } else {
 
-      // Automode deaktivieren (Interval Timer löschen)
-      window.clearInterval(this.automodeIntervalHandle);
+      // Automodus deaktivieren (Interval Timer löschen)
+      window.clearInterval(this.automodusIntervalHandle);
     }
   }
-  get automode(): boolean {
-    return this._automode;
+  get automodus(): boolean {
+    return this._automodus;
   }
-
 
   /**
    * Status der einzelnen Lampen
@@ -111,8 +110,8 @@ export class AmpelComponent {
   lampeMeldetDefekt(): void {
     this.lampeDefekt = true;
 
-    // bei Automode die Lampen automatisch reparieren
-    if (this.automode) {
+    // bei Automodus die Lampen automatisch reparieren
+    if (this.automodus) {
       this.repariereAlleLampen();
     }
   }
