@@ -1,0 +1,5 @@
+<acr-colored-circle [color]="lampeBrennt ? lampenFarbe : 'black'"></acr-colored-circle>
+<div class="steuerung" *ngIf="!steuerungAusblenden">
+  <button type="button" (click)="lichtschalterGedrueckt()" [disabled]="defekt">Lichtschalter</button>
+  <button type="button" (click)="reparieren()" *ngIf="defekt">Reparieren</button>
+</div>

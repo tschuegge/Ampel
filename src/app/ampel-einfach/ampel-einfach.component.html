@@ -1,0 +1,12 @@
+<div>
+  <app-lampe-fuer-ampel-einfach [lampenFarbe]="'red'" [steuerungAusblenden]="true" [lampeBrennt]="lampeRotEin"></app-lampe-fuer-ampel-einfach>
+</div>
+<div>
+  <app-lampe-fuer-ampel-einfach [lampenFarbe]="'orange'" [steuerungAusblenden]="true" [lampeBrennt]="lampeOrangeEin"></app-lampe-fuer-ampel-einfach>
+</div>
+<div>
+  <app-lampe-fuer-ampel-einfach [lampenFarbe]="'green'" [steuerungAusblenden]="true" [lampeBrennt]="lampeGruenEin"></app-lampe-fuer-ampel-einfach>
+</div>
+<div class="steuerung">
+  <button type="button" (click)="tick()">Tick</button>
+</div>
