@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+/**
+ * Mögliche Lösung der Lampe (mit allen Zusatzaufgaben, welche für die Ampel benötigt werden)
+ */
 @Component({
   selector: 'app-lampe-fuer-ampel-einfach',
   templateUrl: './lampe-fuer-ampel-einfach.component.html',

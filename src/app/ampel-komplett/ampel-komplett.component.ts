@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { LampeKomplettComponent } from '../lampe-komplett/lampe-komplett.component';
 
+/**
+ * Mögliche Lösung der Ampel (mit allen Zusatzaufgaben)
+ */
 @Component({
   selector: 'app-ampel-komplett',
   templateUrl: './ampel-komplett.component.html',

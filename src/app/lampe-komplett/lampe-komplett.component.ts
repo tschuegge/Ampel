@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+/**
+ * Mögliche Lösung der Lampe (mit allen Zusatzaufgaben)
+ */
 @Component({
   selector: 'app-lampe-komplett',
   templateUrl: './lampe-komplett.component.html',

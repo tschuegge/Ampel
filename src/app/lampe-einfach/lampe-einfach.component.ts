@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+/**
+ * Mögliche Minimallösung der Lampe (ohne Zusatzaufgaben)
+ */
 @Component({
   selector: 'app-lampe-einfach',
   templateUrl: './lampe-einfach.component.html',
@@ -10,7 +13,6 @@ export class LampeEinfachComponent {
   /**
    * Eigenschaft die angibt ob die Lampe brennt
    */
-  @Input() // @Input ermöglicht, dass der Wert von der übergeordneten Component gesetzt werden kann (Property Binding)
   lampeBrennt = false;
 
   /**

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * Mögliche Minimallösung der Ampel (ohne Zusatzaufgaben)
+ */
 @Component({
   selector: 'app-ampel-einfach',
   templateUrl: './ampel-einfach.component.html',
