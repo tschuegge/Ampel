@@ -5,8 +5,7 @@ import { Component, Input } from '@angular/core';
  */
 @Component({
   selector: 'app-lampe-fuer-ampel-einfach',
-  templateUrl: './lampe-fuer-ampel-einfach.component.html',
-  styleUrls: ['./lampe-fuer-ampel-einfach.component.scss']
+  templateUrl: './lampe-fuer-ampel-einfach.component.html'
 })
 export class LampeFuerAmpelEinfachComponent {
 

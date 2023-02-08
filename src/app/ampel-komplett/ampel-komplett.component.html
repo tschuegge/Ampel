@@ -7,17 +7,17 @@
 <div>
   <app-lampe-komplett [lampenFarbe]="'green'" [steuerungAusblenden]="true" [lampeBrennt]="lampeGruenEin" (gingDefekt)="lampeMeldetDefekt($event)"></app-lampe-komplett>
 </div>
-<div class="steuerung">
+<div class="pt-3">
   <button type="button" (click)="tick()">Tick</button>
   <button type="button" (click)="repariereAlleLampen()" *ngIf="lampeDefekt">Alle Lampen reparieren</button>
 </div>
-<div class="steuerung">
+<div class="pt-3">
   <div>
     <input type="checkbox" id="automodus" [(ngModel)]="automodus">
-    <label for="automodus">Automodus</label>
+    <label for="automodus" class="ps-3">Automodus</label>
   </div>
   <div>
     <input type="checkbox" id="notfallmodus" [(ngModel)]="notfallmodus">
-    <label for="notfallmodus">Notfallmodus</label>
+    <label for="notfallmodus" class="ps-3">Notfallmodus</label>
   </div>
 </div>

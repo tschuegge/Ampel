@@ -5,8 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
  */
 @Component({
   selector: 'app-lampe-komplett',
-  templateUrl: './lampe-komplett.component.html',
-  styleUrls: ['./lampe-komplett.component.scss']
+  templateUrl: './lampe-komplett.component.html'
 })
 export class LampeKomplettComponent {
 

@@ -5,8 +5,7 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'app-ampel-einfach',
-  templateUrl: './ampel-einfach.component.html',
-  styleUrls: ['./ampel-einfach.component.scss']
+  templateUrl: './ampel-einfach.component.html'
 })
 export class AmpelEinfachComponent {
 

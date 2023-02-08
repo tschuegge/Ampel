@@ -1,12 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Mögliche Minimallösung der Lampe (ohne Zusatzaufgaben)
  */
 @Component({
   selector: 'app-lampe-einfach',
-  templateUrl: './lampe-einfach.component.html',
-  styleUrls: ['./lampe-einfach.component.scss']
+  templateUrl: './lampe-einfach.component.html'
 })
 export class LampeEinfachComponent {
 

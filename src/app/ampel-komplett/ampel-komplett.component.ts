@@ -6,8 +6,7 @@ import { LampeKomplettComponent } from '../lampe-komplett/lampe-komplett.compone
  */
 @Component({
   selector: 'app-ampel-komplett',
-  templateUrl: './ampel-komplett.component.html',
-  styleUrls: ['./ampel-komplett.component.scss']
+  templateUrl: './ampel-komplett.component.html'
 })
 export class AmpelKomplettComponent {
 
@@ -170,7 +169,7 @@ export class AmpelKomplettComponent {
     // Alle Referenzen auf defekte Lampen sind im Array für defekte Lampen gespeichert.
     // Sie können nacheinander repariert werden.
 
-    for (let defekteLampe of this.lampenDefektArray) {
+    for (const defekteLampe of this.lampenDefektArray) {
       defekteLampe.reparieren();
     }
 
